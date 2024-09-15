@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Surprise!</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+      body {
+        font-family: 'Press Start 2P', sans-serif;
+        text-align: center;
+        /* Add this to make the entire screen black */
+        background-color: #000;
+      }
+      h1 {
+        color: #fff;
+      }
+      .container {
+        margin-top: 100px;
+      }
+
+      .button {
+        background-color: #7d2ae8;
+        border: none;
+        color: #fff;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 25px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 10px;
+      }
+
+      .blurred {
+        filter: blur(5px);
+      }
+
+      .message {
+        font-size: 24px;
+        margin-top: 20px;
+        /* Make the text white */
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Ready for a surprise?</h1>
+      <button class="button" id="yesButton">Yes</button>
+      <button class="button" id="noButton">No</button>
+    </div>
+    <div class="container blurred" id="surprise">
+      <p class="message">Shut up and click yes!</p>
+      <img
+        src="angry.jpg"
+        alt="Angry Face"
+        style="width: 250px; height: 350px; margin: 20px auto"
+      />
+    </div>
+
+    <script>
+      const surprise = document.getElementById('surprise');
+      const yesButton = document.getElementById('yesButton');
+      const noButton = document.getElementById('noButton');
+
+      yesButton.addEventListener('click', () => {
+        // Replace with the actual content of your web page
+        window.location.href = 'index2.html';
+      });
+
+      noButton.addEventListener('click', () => {
+        surprise.classList.remove('blurred');
+      });
+    </script>
+  </body>
+</html>
